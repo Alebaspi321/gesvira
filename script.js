@@ -36,3 +36,16 @@ menuButton.addEventListener('click',syncMenu);
 nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',syncMenu));
 document.addEventListener('keydown',event=>{if(event.key==='Escape')syncMenu()});
 mobileQuery.addEventListener('change',()=>{closeMenu();syncMenu()});syncMenu();
+
+const placeMenu=()=>{if(mobileQuery.matches)dock.prepend(menuButton);else document.querySelector('.nav').insertBefore(menuButton,nav)};
+menuButton.insertAdjacentHTML('beforeend','<b>Menú</b>');
+const menuPaths=['M3 10 12 3l9 7M5 9v12h14V9M9 21v-7h6v7','M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z','m12 3 3 6 6 3-6 3-3 6-3-6-6-3 6-3Z','M5 5h14v14H5zM8 9h8M8 13h5','M4 4h16v13H8l-4 4ZM8 8h8M8 12h5'];
+nav.querySelectorAll('a').forEach((link,index)=>link.insertAdjacentHTML('afterbegin',`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${menuPaths[index]}"/></svg>`));
+const backdrop=document.createElement('button');backdrop.className='menu-backdrop';backdrop.setAttribute('aria-label','Cerrar navegación');backdrop.tabIndex=-1;document.body.append(backdrop);
+const syncBottomMenu=()=>{document.body.classList.toggle('menu-open',nav.classList.contains('open'));syncMenu()};
+menuButton.addEventListener('click',syncBottomMenu);
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',syncBottomMenu));
+dock.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{closeMenu();syncBottomMenu()}));
+backdrop.addEventListener('click',()=>{closeMenu();syncBottomMenu();menuButton.focus()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')syncBottomMenu()});
+mobileQuery.addEventListener('change',()=>{placeMenu();syncBottomMenu()});placeMenu();
