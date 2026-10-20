@@ -12,3 +12,16 @@ body{padding-bottom:84px;background:#f8fafb}.shell{width:calc(100% - 40px)}
 }
 @media(max-width:359px){.shell{width:calc(100% - 32px)}.hero{padding-inline:16px}.mobile-heading{font-size:33px}.hero .eyebrow{font-size:8px}.contact-card{gap:9px;padding:15px 11px}.contact-card .card-arrow{display:none}.contact-card{grid-template-columns:38px minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.hero-visual{animation:none}}
+
+/* Continuous navy surfaces, with turquoise highlights and readable contrast. */
+:root{--ink:#e9f2f7;--muted:#a8bdcb;--line:#ffffff18;--soft:#0b2439}
+html,body{background:#071a2c;color:#e9f2f7}
+.trust-strip{background:#091f32;border-color:#ffffff12}.trust-strip p,.trust-items{color:#a8bdcb}
+.services-wrap,.purpose{background:#0b2439}.kicker,.value-copy h2 span{color:#54ddc8}
+.section-body p,.section-body .large,.section-heading>p,.service-card p,.value-copy>p:not(.kicker),.value-points small,.values-list p,.objective-grid p{color:#a8bdcb}
+.quote{color:#86e9d8}.service-card,.purpose-card{background:#102d44;border-color:#ffffff16;color:#edf5f9}.service-card:hover{border-color:#39cbb370}.service-icon{background:#1b494e;color:#6ae8d3}.service-card .num,.values-list span,.objective-grid b{color:#6ed8ca}.purpose-card p:last-of-type{color:#a8bdcb}.purpose-card.dark{background:#0a1e33}.values-list article,.objective-grid,.objective-grid article,.value-points>div{border-color:#ffffff18}
+.system-map{background:radial-gradient(circle,#0d2d40 0 31%,transparent 31.5%),radial-gradient(circle,transparent 0 49%,#ffffff12 49.5% 50%,transparent 50.5%)}.node{background:#123249;color:#deeff5;border-color:#ffffff1c}.map-center{box-shadow:0 20px 55px #0003}
+.cta{background:radial-gradient(ellipse at 15% 50%,#14504c55,transparent 65%),#0b2538}.contact-copy .eyebrow{color:#6ae6d1}.contact-copy>p:not(.eyebrow),.response-note small{color:#acc2cd}.response-note{color:#e1f1f4}.contact-card{background:#123247;border-color:#ffffff1c;box-shadow:0 15px 35px #0002}.card-copy strong{color:#f0f7fa}.card-copy small,.card-copy em{color:#adc5cf}.contact-icon{background:#194a4c;color:#70ebd5}.card-arrow{color:#6de3ce}
+@media(max-width:760px){
+body{background:#071a2c}.trust-strip{background:transparent}.trust-items{color:#9bb4c2}.services-wrap,.purpose{background:#0b2439}.service-card,.service-card.featured{background:#102d44;color:#edf5f9;border-color:#ffffff18}.service-toggle{color:#edf5f9}.service-toggle .service-number,.service-toggle .service-plus{color:#69dfcc}.service-card>p,.service-card>ul,.service-card li{color:#afc7d1}.service-card li{border-color:#ffffff18}.service-card.expanded{border-color:#43cdbb88}.purpose-card{background:#102d44}.purpose-card.dark{background:#081c30}.objective-grid article,.objective-grid article:nth-child(odd){border-color:#ffffff18}.cta{background:radial-gradient(ellipse at 0% 0%,#17675a44,transparent 65%),#0b2538}.contact-card{background:#123247;border-color:#ffffff1c}.mobile-dock{background:#0d2a3eee;border-color:#6bbfac38;box-shadow:0 8px 35px #0005}.mobile-dock a{color:#b9d0db}.mobile-dock .dock-contact{background:linear-gradient(120deg,#087f87,#0a9c9a);color:#fff}
+}
