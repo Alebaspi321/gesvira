@@ -1,4 +1,5 @@
 /* A mobile composition with its own rhythm and navigation. */
+.nav-links svg,.menu-toggle b,.menu-backdrop{display:none}
 *{min-width:0}a:focus-visible,button:focus-visible{outline:3px solid #20bda6;outline-offset:5px}section[id]{scroll-margin-top:88px}.mobile-dock,.service-toggle,.mobile-heading{display:none}.dashboard{max-width:100%}.hero-visual{min-width:0}
 @media(max-width:760px){
 body{padding-bottom:84px;background:#f8fafb}.shell{width:calc(100% - 40px)}
@@ -12,6 +13,10 @@ body{padding-bottom:84px;background:#f8fafb}.shell{width:calc(100% - 40px)}
 }
 @media(max-width:359px){.shell{width:calc(100% - 32px)}.hero{padding-inline:16px}.mobile-heading{font-size:33px}.hero .eyebrow{font-size:8px}.contact-card{gap:9px;padding:15px 11px}.contact-card .card-arrow{display:none}.contact-card{grid-template-columns:38px minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.hero-visual{animation:none}}
+@media(max-width:760px){
+html,body{width:100%;margin:0;min-height:100%;background:#071a2c}.hero.shell{width:100%;max-width:none;margin:0;border-radius:0;padding-inline:22px}.site-header{z-index:40}.site-header .nav{justify-content:center}.mobile-dock{z-index:70;grid-template-columns:1fr 1fr 1fr 1.25fr;left:12px;right:12px;bottom:10px;gap:4px}.mobile-dock .menu-toggle{display:flex;position:relative;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:49px;padding:7px 4px;border:0;background:#ffffff09;color:#c2e2e9;border-radius:12px}.mobile-dock .menu-toggle span{width:21px;height:2px;background:#68e4d1}.mobile-dock .menu-toggle b{display:block;font:700 10px "DM Sans",sans-serif;margin-top:2px}.mobile-dock .menu-toggle[aria-expanded="true"]{background:#1e655f}.mobile-dock .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3px) rotate(45deg)}.mobile-dock .menu-toggle[aria-expanded="true"] span:nth-child(2){transform:translateY(-3px) rotate(-45deg)}
+.nav-links{position:fixed;inset:auto 12px calc(92px + env(safe-area-inset-bottom));padding:18px;gap:5px;border-radius:24px;background:linear-gradient(145deg,#12394e,#081e32);border:1px solid #53d9c245;box-shadow:0 -12px 70px #0006;transform:translateY(24px);max-height:calc(100dvh - 115px);overflow-y:auto}.nav-links:before{content:'Explore GESVIRA';display:block;padding:3px 10px 12px;color:#71e5cf;font:800 11px Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase}.nav-links.open{transform:translateY(0)}.nav-links>a{display:flex;align-items:center;gap:14px;min-height:50px;padding:12px;font-size:15px;border:0;border-radius:12px;background:#ffffff04;opacity:1!important}.nav-links>a:active{background:#ffffff12}.nav-links svg{display:block;flex-shrink:0;width:23px;height:23px;fill:none;stroke:#71e5cf;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.nav-links .button{justify-content:flex-start;margin:5px 0 0}.nav-links .button svg{stroke:#fff}.menu-open .site-header{z-index:65}.menu-backdrop{position:fixed;inset:0;z-index:60;background:#020e20aa;border:0;backdrop-filter:blur(5px)}.menu-open .menu-backdrop{display:block}.menu-open .nav-links{z-index:66}
+}
 
 /* Continuous navy surfaces, with turquoise highlights and readable contrast. */
 :root{--ink:#e9f2f7;--muted:#a8bdcb;--line:#ffffff18;--soft:#0b2439}
